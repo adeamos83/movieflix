@@ -1,0 +1,24 @@
+<%  include ./partials/header %>
+<div class="jumbotron bg-warning">
+    <h1>Ade's Favorite Movies</h1>
+</div>
+
+
+<div class="row">
+    <% data["results"].forEach(function(movie){ %>
+    <div class="col-md-4" style="margin-bottom: 30px">
+         <div class="card-deck" style="max-width:344px">
+          <div class="card">
+            <img class="card-img-top" src="http://image.tmdb.org/t/p/w342<%=movie["poster_path"]%>" alt="Card image cap" style="max-width: 342px">
+            <div class="card-body">
+              <h5 class="card-title"><%= movie["title"] %></h5>
+              <p class="card-text"><%=movie["overview"].substr(0, 120)%> ...</p>
+              <p class="card-text"><small stlye="color: white" class="badge badge-warning">Release Date: <%= movie["release_date"].substr(0,4) %></small></p>
+            </div>
+          </div>
+        </div>    
+    </div>
+    <% }) %> 
+</div>
+
+<%  include ./partials/footer %>

@@ -1,0 +1,15 @@
+.jumbotron {
+    margin-top: 20px;
+}
+
+#movie-search {
+    width: 75%;
+}
+
+.make-inline {
+    display: inline;
+}
+
+.title-header {
+    margin: 20px auto;
+}

@@ -1,0 +1,40 @@
+<%  include ./partials/header %>
+
+<h1>Results Page</h1>
+<!--<div class="row">-->
+<!--        <% data["results"].forEach(function(movie){ %>-->
+<!--            <div class="col-md-4 thumbnail">-->
+<!--                <img src="http://image.tmdb.org/t/p/w185<%=movie["poster_path"]%>">-->
+<!--                <div class="title-header">-->
+<!--                    <strong> <%= movie["title"] %> </strong> - <%= movie["release_date"] %>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        <% }) %>   -->
+<!--</div>-->
+    
+<div class="row">
+    <% data["results"].forEach(function(movie){ %>
+    <div class="col-md-4" style="margin-bottom: 30px">
+         <div class="card-deck" style="max-width:344px">
+          <div class="card">
+            <img class="card-img-top" src="http://image.tmdb.org/t/p/w342<%=movie["poster_path"]%>" alt="Card image cap" style="max-width: 342px">
+            <div class="card-body">
+              <h5 class="card-title"><%= movie["title"] %></h5>
+              <p class="card-text"><%=movie["overview"].substr(0, 175)%>...</p>
+              <p class="card-text"><small class="badge badge-warning">Release Date: <%= movie["release_date"].substr(0,4) %></small></p>
+            </div>
+          </div>
+        </div>    
+    </div>
+    <% }) %> 
+</div>
+
+
+
+
+
+
+<a href="/">Search Again!</a>
+
+
+<%  include ./partials/footer %>
