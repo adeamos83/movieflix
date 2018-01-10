@@ -6,10 +6,12 @@ app.set("view engine", "ejs");
 
 app.use(express.static(__dirname + "/public"));
 
+// Homepage
 app.get("/", function(req, res){
     res.render("search");
 })
 
+// Search The Movie Database  using their API function
 app.get("/results", function(req, res){
     var query = req.query.search;
     var apiKey = "ff0a38497fe407668201c3633ebc60f0";
@@ -24,6 +26,7 @@ app.get("/results", function(req, res){
     });
 });
 
+// Pulls information from my favorite movie list on The Movie Database
 app.get("/favorites", function(req, res){
         var query = req.query.search;
     var apiKey = "ff0a38497fe407668201c3633ebc60f0";
