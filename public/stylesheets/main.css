@@ -111,11 +111,11 @@ max-width: 75%;
     }
     
     .card-deck.box-shadow {
-    max-width: 262px;
+    max-width: 342px;
     }
     .card-deck.box-shadow img{
-    height: 301px;
-    max-height: 301px;
+    /*height: 301px;*/
+    max-height: 400px;
     }
     
     .modal-content {
