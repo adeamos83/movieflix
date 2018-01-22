@@ -1,18 +1,20 @@
 <%  include ./partials/header %>
 
-<div class="">
-    <div class="jumbotron box-shadow centered">
-        <h1 class="text-center">Search For A Movie</h1>
+<section class="">
+    <div class="jumbotron centered">
+        <h1 class="text-center">Find your favorite movies.</h1>
         <form class="form-group" action="/results" method= "GET">
             <div class="row mb-2 justify-content-center">
-                <input id="" class="form-control form-control-lg col-12 movie-search" type="text" placeholder="search movie title" name="search">
-            </div>
-            <div class="row justify-content-center">
-                <input id="" class="btn btn-dark search-btn btn-lg btn-block movie-search" type="submit">
+                <div class="input-group">
+                    <input class="form-control form-control-lg col-10" type="text" placeholder="search movie title" name="search">
+                    <div class="input-group-append">
+                        <button class="btn btn-search btn-lg" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                
             </div>
         </form>
     </div>
-</div>
-
+</section>
 
 <%  include ./partials/footer %>

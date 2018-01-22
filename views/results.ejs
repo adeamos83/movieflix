@@ -1,14 +1,14 @@
-<%  include ./partials/header %>
+<%  include ./partials/header-main %>
 
-<div class="container" style="margin-top: 20px">
-  <h3 class="text-left">Search Movie Results</h1>
+<div class="container" style="margin-top: 100px">
+  <h3 class="text-left">Showing movie results for "<%= query %> "</h1>
   <hr>
 </div>
 
 <div class="row make-center">
     <% data["results"].forEach(function(movie){ %>
     <div class="col-6 col-md-4 col-lg-3" style="margin-bottom: 30px">
-         <div class="card-deck box-shadow">
+         <div class="card-deck poster-tile">
           <div class="card" style="border: 0">
             <img data-toggle="modal" data-target="#movieModalCenter<%=movie["id"]%>" class="card-img-top" src="http://image.tmdb.org/t/p/w342<%=movie["poster_path"]%>" alt="Card image cap">
           </div>

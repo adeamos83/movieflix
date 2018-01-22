@@ -1,38 +1,43 @@
-html { 
-  background: url("https://images.alphacoders.com/441/441002.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+/* General Styles */
+
+html, body{
+    height: 100%;
+    font-family:'Source Sans Pro', sans-serif;
+    /*background-color: #F5F7FA;*/
 }
 
-body {
-    background-color: #ececec;
-}
-
-.navbar {
-    background-color: #008c9e;
+h3 {
+    font-weight: 600;
 }
 
 
-.jumbotron h1 {
-    font-size: 2.25rem;
+.bg-light-gray {
+    background-color: #F5F7FA;
 }
 
-
-.jumbotron {
-    margin-top: 20px;
-    background-color: #008c9e;
-    color: #e9e9e5;
-    min-width: 350px;
+.bg-rise {
+	background-color: #FC6E51;
+}
+.text-rise {
+	color: #FC6E51;
 }
 
-.movie-search {
-max-width: 75%;
+.text-rise a {
+	color: #AAB2BD;
+}
+.text-rise a:hover {
+	color: #E9573F;
 }
 
-.title-header {
-    margin: 20px auto;
+btn-rise {
+    background-color: #FC6E51;
+    border-color: #FC6E51;
+    
+}
+
+btn-rise:hover {
+    background-color: #E9573F;
+    border-color: #E9573F;
 }
 
 .make-center{
@@ -40,8 +45,78 @@ max-width: 75%;
     margin-right: -5px;
 }
 
-.search-btn {
-    vertical-align: bottom;
+.form-control:focus {
+    box-shadow: none;
+    border-width: 1px 0 1px 1px;
+    border-color: #ced4da;
+}
+
+.box-shadow {
+     box-shadow: 5px 6.5px 8px #888888;
+ }
+
+/* Navbar section */
+
+
+.trans-bar{
+  background: rgba(0, 0, 0, 0.7);;
+  border-radius:0;
+  border:none;
+}
+
+.welcome .text-rise a {
+	color: #F5F7FA;
+}
+.welcome .text-rise a:hover {
+	color: #E9573F;
+}
+
+.welcome a.navbar-brand:hover {
+    color: #F5F7FA;
+}
+
+a.navbar-brand:hover {
+    color: #FC6E51;
+    font-weight: 600;
+}
+
+a.navbar-brand {
+    color: #FC6E51;
+    font-weight: 600;
+}
+
+.btn-nav-search {
+    background-color: #E6E9ED;
+    border-style: solid;
+    border-color: #ced4da;
+    border-width: 1px 1px 1px 0;
+}
+
+.navbar-toggler-hamburger {
+   color: #F5F7FA;
+}
+
+.navbar-toggler-hamburger-rise {
+    color: #FC6E51;
+}
+#my-search {
+    background-color: #E6E9ED;
+    max-width: 415px;
+}
+
+/* Search page */
+/* ========================================= */
+
+/* Welcome Hero */
+
+.welcome {
+    width: 100%;
+    height:100%;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.alphacoders.com/441/441002.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .centered {
@@ -52,15 +127,41 @@ max-width: 75%;
   transform: translate(-50%, -50%);
 }
 
-
-.card-deck.box-shadow {
-    max-width: 200px;
+.btn-search {
+    /*background-color: #E6E9ED;*/
+    /*border-style: solid;*/
+    /*border-color: #ced4da;*/
+    border-width: 1px 1px 1px 0;
 }
 
-.card-deck.box-shadow img{
+
+.jumbotron h1 {
+    font-size: 2.25rem;
+}
+
+.jumbotron {
+    margin-top: 20px;
+    background-color: transparent;
+    color: #e9e9e5;
+    min-width: 350px;
+}
+
+
+/* Favorites and Results page */
+/* ========================================= */
+
+.card-deck.poster-tile {
+    max-width: 200px;
+    
+}
+
+.card-deck.poster-tile img{
     max-height: 240px;
     min-height: 228.750px;
+    cursor: pointer;
 }
+
+/* Movie Detail Modals */
 
 .modal-content {
     background-color: #ececec;
@@ -95,11 +196,13 @@ max-width: 75%;
  height: 380px;
 }
 
+
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .movie-search {
-        max-width: 75%;
-    }
+    /*.movie-search {*/
+    /*    max-width: 75%;*/
+    /*}*/
     
     .jumbotron h1{
         font-size: 2.5rem;
@@ -110,10 +213,10 @@ max-width: 75%;
         padding: 32px;
     }
     
-    .card-deck.box-shadow {
+    .card-deck.poster-tile {
     max-width: 342px;
     }
-    .card-deck.box-shadow img{
+    .card-deck.poster-tile img{
     /*height: 301px;*/
     max-height: 400px;
     }
@@ -126,6 +229,11 @@ max-width: 75%;
      .modal-dialog.modal-dialog-centered {
          max-width: 550px;
      }
+     #my-search {
+         min-width: 415px;
+         max-width: 415px;    
+     }
+     
 }
 
 
@@ -137,7 +245,9 @@ max-width: 75%;
     .jumbotron{
         min-width: 500px;
     }
-    
+    #my-search {
+        min-width: 250px;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -151,7 +261,9 @@ max-width: 75%;
      .movie-search {
         max-width: 75%;
     }
-    /*.card-deck.box-shadow {*/
-    /*max-width: 220px;*/
-    /*}*/
+    #my-search {
+    width: 400px;
+    }
+
+
 }
