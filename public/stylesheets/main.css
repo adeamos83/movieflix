@@ -99,6 +99,14 @@ a.navbar-brand {
 .navbar-toggler-hamburger-rise {
     color: #FC6E51;
 }
+
+.navbar-brand {
+    font-size: 20px;
+}
+.navbar-nav li {
+    font-size : 18px;
+}
+
 #my-search {
     background-color: #E6E9ED;
     max-width: 415px;
@@ -248,6 +256,8 @@ a.navbar-brand {
     #my-search {
         min-width: 250px;
     }
+
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -258,12 +268,21 @@ a.navbar-brand {
     .jumbotron h1{
         font-size: 3.25rem;
     }
+    
      .movie-search {
         max-width: 75%;
     }
+    
     #my-search {
     width: 400px;
     }
-
+    
+    .navbar-brand {
+    font-size: 24px;
+    }
+    .navbar-nav li {
+        font-size : 20px;
+    }
+    
 
 }
