@@ -3,7 +3,7 @@
 html, body{
     height: 100%;
     font-family:'Source Sans Pro', sans-serif;
-    /*background-color: #F5F7FA;*/
+    background-color: #fff;
 }
 
 h3 {
@@ -120,8 +120,7 @@ a.navbar-brand {
 .welcome {
     width: 100%;
     height:100%;
-    
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.alphacoders.com/441/441002.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/movie-actor-collage.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -136,9 +135,6 @@ a.navbar-brand {
 }
 
 .btn-search {
-    /*background-color: #E6E9ED;*/
-    /*border-style: solid;*/
-    /*border-color: #ced4da;*/
     border-width: 1px 1px 1px 0;
 }
 
